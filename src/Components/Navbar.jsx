@@ -3,11 +3,11 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -21,12 +21,12 @@ const Navbar = () => {
       setDrawerOpen(open);
   };
 
-  const links = ['Home', 'About', 'Services', 'Contact'];
+  const links = ['About Us', 'Pricing', 'Customers', 'Solutions'];
   const btns = ['Book a Demo', 'Contact Us'];
   return (
       <>
           <AppBar position="static">
-              <Toolbar className='flex justify-between bg-gray-800'>
+              <Toolbar className='flex justify-between bg-[#002228] border-b-1 border-[#183A40] '>
                   {isMobile && (
                       <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer(true)}>
                           <MenuIcon />
@@ -37,15 +37,38 @@ const Navbar = () => {
                   </div>
                  <div>
                   {!isMobile && links.map((link) => ( 
-                      <Button key={link} color="inherit">
+                      <Button sx={{fontFamily:'primary',textTransform:'capitalize',fontSize:'16px',
+                        '&:hover': {
+                                backgroundColor: 'purple',
+                                color: 'aqua',
+                            }
+                       }} key={link} color="inherit">
                           {link}
                       </Button>
                   ))}
                   </div>
                   
-                  <div className="flex space-x-4">
-                  {!isMobile && btns.map((btn) => ( 
-                      <Button key={btn} color="inherit">
+                  <div className="flex gap-4">
+                  {!isMobile && btns.map((btn,index) => ( 
+                      <Button 
+                      sx={{
+                          fontFamily: 'primary',
+                          textTransform: 'capitalize',
+                          fontSize: '14px',
+                          width: '122px',
+                          height: '36px',
+                          backgroundColor: index % 2 === 0 ? '#0FF1F6' : 'transparent',
+                          color: index % 2 === 0 ? 'black' : 'white',
+                          border: index % 2 !== 0 ? '1px solid white' : 'none',
+                          borderRadius: '100px',
+                            '&:hover': {
+                                backgroundColor: index % 2 === 0 ? 'green' : 'pink',
+                                color: index % 2 === 0 ? 'white' : 'black',
+                            }
+                            
+                      }} 
+                      key={btn}
+                  >
                           {btn}
                       </Button>
                   ))}
