@@ -15,6 +15,10 @@ function BetaButton({ className }) {
             fontFamily: 'primary',
             fontSize: '16px',
             textTransform: 'none',
+            '&:hover': {
+            backgroundColor: 'rgba(210, 0, 0, 0.8)',
+            color: '#0FF1F6',
+          },
             ...className 
           }} 
           variant="contained" 
