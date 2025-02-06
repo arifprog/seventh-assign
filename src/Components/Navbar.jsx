@@ -32,7 +32,7 @@ const Navbar = () => {
                           <MenuIcon />
                       </IconButton>
                   )}
-                  <div className='w-[91px] h-[20px] text-[ #0FF1F6]'>
+                  <div className='w-[91px] h-[20px] text-[ #0FF1F6] md:ml-14'>
                     <img src="/image/Logo.png" alt="" />
                   </div>
                  <div>
@@ -48,7 +48,7 @@ const Navbar = () => {
                   ))}
                   </div>
                   
-                  <div className="flex gap-4">
+                  <div className="flex gap-4 md:mr-14">
                   {!isMobile && btns.map((btn,index) => ( 
                       <Button 
                       sx={{
