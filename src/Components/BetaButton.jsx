@@ -30,4 +30,4 @@ function BetaButton({ className }) {
     );
   }
 
-export default BetaButton
+export default BetaButton;
