@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar';
 import Herosection from './Components/Herosection';
 import Partners from './Components/Partners';
 import Features from './Components/Features';
+import Controls from './Components/Controls';
 function App() {
   return (
     <>
@@ -11,6 +12,7 @@ function App() {
     <Herosection/>
     <Partners/>
     <Features/>
+    <Controls/>
     </main>
     </>
   )
