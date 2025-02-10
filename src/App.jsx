@@ -5,6 +5,7 @@ import Partners from './Components/Partners';
 import Features from './Components/Features';
 import Controls from './Components/Controls';
 import Testimonial from './Components/Testimonial';
+import Improvement from './Components/Improvement';
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
     <Features/>
     <Controls/>
     <Testimonial/>
+    <Improvement/>
     </main>
     </>
   )
