@@ -26,7 +26,7 @@ function Controls() {
               <Typography variant="h5" gutterBottom sx={{ color: '#FFFFFF', fontFamily: 'Montserrat', fontSize: '40px',textAlign: 'left' }}>
                 Train your aiDR on your...
               </Typography>
-              <Typography variant="h5" color="primary" gutterBottom sx={{ color: '#0FF1F6', fontFamily: 'Montserrat', fontSize: isMobile?'38px':'40px',textAlign: 'left' }}>
+              <Typography variant="h5" color="primary" gutterBottom sx={{ color: '#0FF1F6', fontFamily: 'Montserrat', fontSize: isMobile?'38px':'40px',textAlign: 'left',fontStyle:'italic' }}>
                 preferred email st/
               </Typography>
               <Typography variant="body1" gutterBottom sx={{ color: '#FFFFFFe4', fontFamily: 'Work Sans', fontSize: isMobile?'22px':'24px',textAlign: 'left',marginRight:'50px'}}>
