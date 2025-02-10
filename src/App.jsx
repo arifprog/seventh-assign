@@ -17,6 +17,7 @@ function App() {
     <Controls/>
     <Testimonial/>
     <Improvement/>
+    <Newera/>
     </main>
     </>
   )
