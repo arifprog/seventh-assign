@@ -6,6 +6,7 @@ import Features from './Components/Features';
 import Controls from './Components/Controls';
 import Testimonial from './Components/Testimonial';
 import Improvement from './Components/Improvement';
+import Newera from './Components/Newera';
 function App() {
   return (
     <>
