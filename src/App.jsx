@@ -7,6 +7,7 @@ import Controls from './Components/Controls';
 import Testimonial from './Components/Testimonial';
 import Improvement from './Components/Improvement';
 import Newera from './Components/Newera';
+import Footer from './Components/Footer';
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
     <Testimonial/>
     <Improvement/>
     <Newera/>
+    <Footer/>
     </main>
     </>
   )
