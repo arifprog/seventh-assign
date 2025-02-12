@@ -40,7 +40,7 @@ function Improvement() {
                           <Typography variant="h5" color="primary" gutterBottom sx={{ color: '#0FF1F6', fontFamily: 'Montserrat', fontSize: isMobile ? '24px' : '32px', textAlign: 'left',fontStyle:'italic',px:isMobile ?2:8 }}>
                           Let us handle the rest.
                           </Typography>
-                          <Typography variant="body1" gutterBottom sx={{ color: '#FFFFFFe4', fontFamily: 'Work Sans', fontSize: isMobile ? '18px' : '20px', textAlign: 'left',px:isMobile ?2:8,width:isMobile ? 'full':'582px',height:'52px' }}>
+                          <Typography variant="body1" gutterBottom sx={{ color: '#FFFFFFa2', fontFamily: 'Work Sans', fontSize: isMobile ? '18px' : '20px', textAlign: 'left',px:isMobile ?2:8,width:isMobile ? 'full':'582px',height:'52px' }}>
                           Keep your reps “in the air” -- out in the field and on the phone where they can build relationships.
                           </Typography>
                       </Box>

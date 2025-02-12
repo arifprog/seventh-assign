@@ -15,7 +15,7 @@ function Newera() {
         </div>
 
         <div className="w-full md:w-[480px]  h-[52px] mx-auto mt-14">
-          <p className='font-primary text-[16px] md:text-[20px] text-[#ffffffe4] text-left md:text-center mx-4 md:mx-4'>Wizia lets you train, activate, and optimize aiDRs. 
+          <p className='font-primary text-[16px] md:text-[20px] text-[#ffffffa2] text-left md:text-center mx-4 md:mx-4'>Wizia lets you train, activate, and optimize aiDRs. 
           Take your outbound to new levels of performance and efficiency.</p>
         </div>
         

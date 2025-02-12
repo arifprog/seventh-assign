@@ -13,7 +13,7 @@ function Footer() {
     <>
      <Box> 
     
-      <AppBar position="static"sx={{  width:'full',height:isMobile?'250px':'109px',bgcolor:'#07292F',display:isMobile?'grid':'flex',px:isMobile?4:10,py:2}}> 
+      <AppBar position="static"sx={{  width:'full',height:isMobile?'250px':'109px',bgcolor:'#07292F',display:isMobile?'grid':'flex',px:isMobile?4:10,py:3}}> 
       
           <Typography sx={{width:'72px',height:'16px',mx:isMobile?'auto':0,}}>
                     <img className='mt-6 'src="/image/Logo.png" alt="" />

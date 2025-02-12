@@ -38,7 +38,7 @@ const Features = () => {
                     {item.title}
                   </Typography>
                   
-                  <Typography variant="body2" align="left" sx={{ color: '#FFFFFFe4',fontFamily: 'Work Sans',fontSize: '20px', paddingRight:'150px'}}>
+                  <Typography variant="body2" align="left" sx={{ color: '#FFFFFFa2',fontFamily: 'Work Sans',fontSize: '20px', paddingRight:'150px'}}>
                     {item.description}
                   </Typography>
                 </Box>

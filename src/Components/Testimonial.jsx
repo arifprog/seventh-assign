@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {Typography,Box,MobileStepper,Button,Paper,Container,useMediaQuery,useTheme,} from '@mui/material';
 import { ArrowBack, ArrowForward } from '@mui/icons-material'; 
-import { styled } from '@mui/material/styles'; 
+import { styled } from '@mui/material/styles';
+
 
 
 const QuoteIcon = styled(Typography)(({ theme }) => ({
@@ -15,7 +16,7 @@ const QuoteIcon = styled(Typography)(({ theme }) => ({
 
 const testimonials = [
   {
-    quote: 'Qorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.',
+    quote: 'Qorem ipsum dolor sit amet, consectetur adipiscing elit...',
     name: 'John Doe',
     title: 'Chief Strategy Officer @ Company',
   },
@@ -60,7 +61,7 @@ const Testimonial = () => {
 
 
   return (
-    <Container maxWidth="xl" sx={{ py: 8,backgroundColor:'#002228',height:'537px'}}>
+    <Container maxWidth="xl" sx={{ py:isMobile?2:8,backgroundColor:'#002228',height:'537px'}}>
       <Paper elevation={3} sx={{ p: 4, backgroundColor: '#002228', color: 'white',width: isMobile? 'full' :'920px', height:'400px',mx:isMobile? 'full' : 33,position: 'relative' }}> 
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
@@ -121,27 +122,31 @@ const Testimonial = () => {
           </>
           )}
           
+          {isMobile && (
           <MobileStepper/>
-        
-          <Box sx={{ display: 'flex', justifyContent: 'center', mt:isMobile?18:10}}>
-            {[...Array(maxSteps)].map((_, index) => (
-              <Box
-                key={index}
-                onClick={() => handleStepChange(index)}
-                sx={{
-                  width: 12,
-                  height: 12,
-                  borderRadius: '50%',
-                  backgroundColor: activeStep === index ? '#0FF1F6' : 'grey',
-                  margin: '0 6px',
-                  cursor: 'pointer',
-                  transition: 'background-color 0.3s',
-                  '&:hover': {
-                    backgroundColor: activeStep === index ? '#0FF1F6' : '#96ACAF',
-                  },
-                }}
-              />
-            ))}
+        )}
+
+
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: isMobile ? 10 : 10 }}>
+          {[...Array(maxSteps)].map((_, index) => (
+            <Box
+              key={index}
+              onClick={() => handleStepChange(index)}
+              sx={{
+                width: activeStep === index ? 12 : 12,
+                height: activeStep === index ? 12 : 12,
+                borderRadius: '50%',
+                backgroundColor: activeStep === index ? '#0FF1F6' : 'grey',
+                margin: '0 12px',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  backgroundColor: activeStep === index ? '#0FF1F6' : '#96ACAF',
+                  transform: activeStep !== index ? 'scale(1.1)' : 'scale(1)',
+                },
+              }}
+            />
+          ))}
           </Box>
         </Box>
       </Paper>

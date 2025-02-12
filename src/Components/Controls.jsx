@@ -29,7 +29,7 @@ function Controls() {
               <Typography variant="h5" color="primary" gutterBottom sx={{ color: '#0FF1F6', fontFamily: 'Montserrat', fontSize: isMobile?'38px':'40px',textAlign: 'left',fontStyle:'italic' }}>
                 preferred email st/
               </Typography>
-              <Typography variant="body1" gutterBottom sx={{ color: '#FFFFFFe4', fontFamily: 'Work Sans', fontSize: isMobile?'22px':'24px',textAlign: 'left',marginRight:'50px'}}>
+              <Typography variant="body1" gutterBottom sx={{ color: '#FFFFFFa2', fontFamily: 'Work Sans', fontSize: isMobile?'22px':'24px',textAlign: 'left',marginRight:'50px'}}>
                 You're in control. Train your aiDR on elements of your Marketing strategy.
               </Typography>
             </Box>
