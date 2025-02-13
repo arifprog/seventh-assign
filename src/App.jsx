@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router";
 import Navbar from './Components/Navbar';
 import Herosection from './Components/Herosection';
 import Partners from './Components/Partners';
@@ -8,7 +10,7 @@ import Testimonial from './Components/Testimonial';
 import Improvement from './Components/Improvement';
 import Newera from './Components/Newera';
 import Footer from './Components/Footer';
-import { BrowserRouter } from "react-router";
+
 function App() {
   return (
     <>
