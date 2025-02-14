@@ -6,6 +6,9 @@ import AboutUs from './Components/AboutUs';
 import Pricing from './Components/Pricing';
 import Customers from './Components/Customers';
 import Solutions from './Components/Solutions';
+import BookDemo from './Components/BookDemo';
+import Contact from './Components/Contact';
+import Error from './Components/Error';
 
 function App() {
   return (
@@ -16,6 +19,10 @@ function App() {
         <Route path="pricing" element={<Pricing />} />
         <Route path="customers" element={<Customers />} />
         <Route path="solutions" element={<Solutions />} />
+        <Route path="demo" element={<BookDemo />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<Error />} ></Route>
+
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -6,6 +6,7 @@ import Controls from './Controls';
 import Testimonial from './Testimonial';
 import Improvement from './Improvement';
 import Newera from './Newera';
+import BookDemo from './BookDemo';
 
 
 function AboutUs() {
@@ -18,6 +19,7 @@ function AboutUs() {
           <Testimonial />
           <Improvement />
           <Newera />
+          
 
 
       </>
