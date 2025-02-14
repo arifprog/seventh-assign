@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -32,8 +33,17 @@ const Navbar = () => {
     setDrawerOpen(open);
   };
 
-  const links = ['About Us', 'Pricing', 'Customers', 'Solutions'];
-  const btns = ['Book a Demo', 'Contact Us'];
+  const links = [
+    { to: '/', text: 'About Us' },
+    { to: '/pricing', text: 'Pricing' },
+    { to: '/customers', text: 'Customers' },
+    { to: '/solutions', text: 'Solutions' },
+  ]; // Array of objects for links
+
+  const btns = [
+    { to: '/demo', text: 'Book a Demo' }, 
+    { to: '/contact', text: 'Contact Us' }, 
+  ];
   return (
     <>
       <AppBar position="static">
@@ -48,20 +58,23 @@ const Navbar = () => {
           </div>
           <div>
             {!isMobile && links.map((link) => ( 
-              <Button sx={{fontFamily:'primary',textTransform:'capitalize',fontSize:'16px',
+              <Button  component={Link}
+              to={link.to}
+                 sx={{fontFamily:'primary',textTransform:'capitalize',fontSize:'16px',
                 '&:hover': {
                   backgroundColor: 'purple',
                   color: 'aqua',
                 }
-              }} key={link} color="inherit">
-                {link}
+              }} key={link.text} color="inherit">
+                {link.text}
               </Button>
             ))}
           </div>
 
           <div className="flex gap-4 md:mr-14">
             {!isMobile && btns.map((btn,index) => ( 
-              <Button 
+              <Button  component={Link} 
+              to={btn.to}
                 sx={{
                   fontFamily: 'primary',
                   textTransform: 'capitalize',
@@ -77,9 +90,9 @@ const Navbar = () => {
                     color: index % 2 === 0 ? 'white' : 'black',
                   }
                 }} 
-                key={btn}
+                key={btn.text}
               >
-                {btn}
+                {btn.text}
               </Button>
             ))}
           </div>
@@ -88,9 +101,10 @@ const Navbar = () => {
       </AppBar>
       <StyledDrawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
         <div role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
-          {links.concat(btns).map((link) => (
-            <Button key={link} style={{ display: 'block', padding: '14px', color: 'aqua' }}> 
-              {link}
+          {links.concat(btns).map((item) => (
+            <Button  component={Link} 
+            to={item.to} key={item.text} style={{ display: 'block', padding: '14px', color: 'aqua' }}> 
+              {item.text}
             </Button>
           ))}
         </div>

@@ -1,32 +1,25 @@
 import React from 'react';
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
-import Herosection from './Components/Herosection';
-import Partners from './Components/Partners';
-import Features from './Components/Features';
-import Controls from './Components/Controls';
-import Testimonial from './Components/Testimonial';
-import Improvement from './Components/Improvement';
-import Newera from './Components/Newera';
 import Footer from './Components/Footer';
+import AboutUs from './Components/AboutUs';
+import Pricing from './Components/Pricing';
+import Customers from './Components/Customers';
+import Solutions from './Components/Solutions';
 
 function App() {
   return (
-    <>
-    <main>
-    <Navbar/>
-    <Herosection/>
-    <Partners/>
-    <Features/>
-    <Controls/>
-    <Testimonial/>
-    <Improvement/>
-    <Newera/>
-    <Footer/>
-    </main>
-    </>
-  )
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<AboutUs />} />
+        <Route path="pricing" element={<Pricing />} />
+        <Route path="customers" element={<Customers />} />
+        <Route path="solutions" element={<Solutions />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
