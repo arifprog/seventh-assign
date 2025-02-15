@@ -36,7 +36,12 @@ function Controls() {
             <Grid container rowspacing={1} justifyContent="center" sx={{ py: 1, marginLeft: isMobile ? '0px' : '300px',marginRight: isMobile ? '0px' : '500px',display:'grid',gap:1}}>
               {data.map((item, index) => (
                 <Grid item xs={12} sm={6} md={4} lg={3} key={index} >
-                  <Box sx={{ display: 'flex',padding:'1px 1px'}}>
+                  <Box sx={{ display: 'flex',padding:'1px 1px',transition: 'transform 0.3s, background-color 0.3s',
+                      '&:hover': {
+                        transform: 'scale(1.05)',
+                        backgroundColor: '#004d4d',
+                      },
+                    }}>
                     <CheckCircleOutlinedIcon style={{ color: '#14BCB2', width: '24px', height: '34px' }} />
                     <Typography variant="h6" gutterBottom sx={{ ml: 1,color: '#14BCB2', fontFamily: 'Montserrat', fontSize: '20px',paddingLeft:'10px'}}>
                       {item}

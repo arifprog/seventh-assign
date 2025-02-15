@@ -50,7 +50,10 @@ function Improvement() {
                         <Grid container spacing={3} justifyContent="left" sx={{ py:isMobile ?7:4, marginLeft: isMobile ? '0px' : '0px',px:isMobile ?2:16 }}>
                             {data.map((item, index) => (
                                 <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-                                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'left', width: 'full', height:isMobile ?'70px': '114px', }}>
+                                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'left', width: 'full', height:isMobile ?'70px': '114px',transition: 'transform 0.3s, background-color 0.3s',
+                '&:hover': {
+                      transform: 'scale(1.1)',
+                      } }}>
                                         <Typography variant="body2" align="left" sx={{ color: '#0FF1F6', fontFamily: 'Montserrat', fontSize:isMobile ? '28px' : '40px'}}>
                                             {item.result}
                                         </Typography>

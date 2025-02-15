@@ -30,7 +30,10 @@ const Features = () => {
           <Grid container spacing={10} justifyContent="center" sx={{ py: 8,marginLeft: isMobile ? '0px' : '100px', }}>
             {data.map((item, index) => (
               <Grid item xs={12} sm={6} md={4} lg={3} key={index} >
-                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'left', width: '384px', height: '254px', }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'left', width: '384px', height: '254px',transition: 'transform 0.3s, background-color 0.3s',
+                '&:hover': {
+                      transform: 'scale(1.05)',
+                      }}}>
                   
                   <img src={item.icon} alt={item.title} style={{ width: '64px', height: '64px', }} />
                   
